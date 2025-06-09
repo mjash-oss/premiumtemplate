@@ -812,7 +812,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
   body.dark-mode #cs-navigation {
-    background-color: var(--dark);
+    background-color: white;
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
@@ -878,7 +878,7 @@
     top: 0;
     left: 0;
     content: "";
-    opacity: 0.7;
+    opacity: 0.3;
     display: block;
     background: #000;
     height: 100%;

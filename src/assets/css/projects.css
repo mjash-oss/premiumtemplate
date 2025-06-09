@@ -1,88 +1,124 @@
 /* PAGE-SPECIFIC STYLES FOR THE PROJECTS PAGE */
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---          Pricing           -->
 <--- -------------------------- -*/
-/* Mobile - 360px - Contains hover animation */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #gallery {
-    position: relative;
-    /* Prevents overflow from the image going off screen */
-    overflow: hidden;
+  #pricing-975 {
     padding: var(--sectionPadding);
-    /* Centers button */
-    text-align: center;
   }
-  #gallery .cs-container {
+  #pricing-975 .cs-container {
+    width: 100%;
+    max-width: 80rem;
     margin: auto;
-    max-width: 82.625em;
-    width: 100%;
-  }
-  #gallery .cs-image-group {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto 3.75rem;
-    max-width: 82.625em;
-    width: 100%;
-    padding: 0;
-    /* used rem so it doesn't scale with the font size of on parent */
-    font-size: min(1.1vw, 1em);
-    gap: 1.875em;
-  }
-  #gallery .cs-row {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    gap: 1.875em;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #gallery .cs-picture {
-    position: relative;
-    display: block;
-  }
-  #gallery .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+  #pricing-975 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
     width: 100%;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
   }
-  #gallery .cs-row-1 .cs-picture1 {
-    height: 35.4375em;
-    width: 26.25em;
+  #pricing-975 .cs-title {
+    margin: 0;
+    color: var(--headerColor);
   }
-  #gallery .cs-row-1 .cs-picture2 {
-    height: 39.3125em;
-    width: 26.25em;
+  #pricing-975 .cs-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 1.25rem;
+    /* 28px - 40px */
+    row-gap: clamp(1.75rem, 3vw, 2.5rem);
   }
-  #gallery .cs-row-1 .cs-picture3 {
-    height: 32em;
-    width: 26.25em;
+  #pricing-975 .cs-menu-group {
+    width: 100%;
+    max-width: 37.5rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 28px - 40px */
+    gap: clamp(1.75rem, 3vw, 2.5rem);
   }
-  #gallery .cs-row-2 .cs-picture1 {
-    height: 30.75em;
-    width: 26.25em;
+  #pricing-975 .cs-menu-item {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
   }
-  #gallery .cs-row-2 .cs-picture2 {
-    height: 32.3125em;
-    width: 26.25em;
+  #pricing-975 .cs-h3 {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
   }
-  #gallery .cs-row-2 .cs-picture3 {
-    height: 39.3125em;
-    width: 26.25em;
+  #pricing-975 .cs-h3:before {
+    /* grey line */
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #e8e8e8;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0.8125rem;
+    left: 0;
+    z-index: -1;
   }
-  #gallery .cs-row-3 .cs-picture1 {
-    height: 39.0625em;
-    width: 26.25em;
+  #pricing-975 .cs-header {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    text-align: inherit;
+    font-weight: 700;
+    max-width: 25rem;
+    padding-right: 0.5rem;
+    background-color: #fff;
+    color: var(--headerColor);
   }
-  #gallery .cs-row-3 .cs-picture2 {
-    height: 28.25em;
-    width: 26.25em;
+  #pricing-975 .cs-price {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    padding-left: 0.5rem;
+    background-color: #fff;
+    color: var(--headerColor);
   }
-  #gallery .cs-row-3 .cs-picture3 {
-    height: 39.3125em;
-    width: 26.25em;
+  #pricing-975 .cs-menu-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-975 .cs-menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #pricing-975 .cs-menu-group {
+    width: 100%;
   }
 }
 
