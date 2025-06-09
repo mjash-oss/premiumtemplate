@@ -1,0 +1,197 @@
+---
+title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
+tags: "sitemap" # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+eleventyNavigation:
+    key: Home
+    order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+
+    <!-- JSON Schema Markup -->
+    <!-- prettier-ignore-start -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+    <!-- prettier-ignore-end -->
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+<!--                  Gallery                     -->
+<!-- ============================================ -->
+
+<section id="gallery-42">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+            </div>
+            <div class="cs-flex">
+            </div>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture-1">
+                <source media="(max-width: 600px)" srcset="assets/images/port1.jpg">
+                <source media="(min-width: 601px)" srcset="assets/images/port1.jpg">
+                <img loading="lazy" decoding="async" src="assets/images/port1.jpg" alt="formerly dress you people outside" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture-2">
+                <source media="(max-width: 600px)" srcset="assets/images/spiralshell.jpg">
+                <source media="(min-width: 601px)" srcset="assets/images/spiralshell.jpg">
+                <img loading="lazy" decoding="async" src="assets/images/spiralshell.jpg" alt="formal dinner" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture-3">
+                <source media="(max-width: 600px)" srcset="assets/images/dessertanddrinks.jfif">
+                <source media="(min-width: 601px)" srcset="assets/images/dessertanddrinks.jfif">
+                <img loading="lazy" decoding="async" src="assets/images/dessertanddrinks.jfif" alt="formerly dress you people outside" width="780" height="582">
+            </picture>
+            <picture class="cs-picture cs-picture-4">
+                <source media="(max-width: 600px)" srcset="assets/images/spiralshell.jpg">
+                <source media="(min-width: 601px)" srcset="assets/images/spiralshell.jpg">
+                <img loading="lazy" decoding="async" src="assets/images/spiralshell.jpg" alt="recital" width="780" height="582">
+            </picture>
+            <picture class="cs-picture cs-picture-5">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra5-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra5.jpg" alt="formal evening" width="380" height="271">
+            </picture>
+            <picture class="cs-picture cs-picture-6">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra6-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/orchestra6.jpg" alt="formal dinner" width="380" height="271">
+            </picture>
+        </div>
+    </div>
+</section>
+
+    <!-- ============================================ -->
+    <!--                   Reviews                    -->
+    <!-- ============================================ -->
+
+    <section id="reviews">
+        <div class="cs-container">
+            <span class="cs-topper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
+                dolor volutpat porttitor sagittis nunc nisl. Sagittis sit</span>
+            <p class="cs-text">
+            </p>
+            <ul class="cs-card-group">
+                <!-- Review 1 -->
+                <li class="cs-item">
+                    <img
+                        class="cs-item-img"
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
+                        alt="profile picture"
+                        width="80"
+                        height="80"
+                    />
+                    <p class="cs-item-p">
+                        Dictum dolor, nullam morbi sem in auctor proin.
+                        Consequat dolor habitasse nam sed tempor. Viverra magna
+                        pharetra rhoncus, nec sed ullamcorper lectus et. Auctor
+                        velit diam fermentum consequat. Feugiat viverra massa
+                        urna, volutpat orci imperdiet eget eget.
+                    </p>
+                    <span class="cs-reviewer">
+                        Jon Doe
+                        <span class="cs-desc">Food Blogger</span>
+                    </span>
+                    <img
+                        class="cs-item-stars"
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+                        alt="stars"
+                        width="96"
+                        height="16"
+                    />
+                </li>
+                <!-- Review 2 -->
+                <li class="cs-item">
+                    <img
+                        class="cs-item-img"
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
+                        alt="profile picture"
+                        width="80"
+                        height="80"
+                    />
+                    <p class="cs-item-p">
+                        Dictum dolor, nullam morbi sem in auctor proin.
+                        Consequat dolor habitasse nam sed tempor. Viverra magna
+                        pharetra rhoncus, nec sed ullamcorper lectus et. Auctor
+                        velit diam fermentum consequat. Feugiat viverra massa
+                        urna, volutpat orci imperdiet eget eget.
+                    </p>
+                    <span class="cs-reviewer">
+                        Jane Doe
+                        <span class="cs-desc">Homeowner</span>
+                    </span>
+                    <img
+                        class="cs-item-stars"
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+                        alt="stars"
+                        width="96"
+                        height="16"
+                    />
+                </li>
+            </ul>
+            <a
+                aria-label="read more reviews"
+                href="/reviews"
+                class="cs-button-solid"
+                >Our Reviews</a
+            >
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
+{% endblock %}
