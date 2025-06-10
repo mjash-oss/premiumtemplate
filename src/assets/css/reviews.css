@@ -256,11 +256,21 @@
     max-width: 80rem;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     gap: 3.25rem;
   }
   #contact-2320 .cs-container2 {
-    max-width: 80rem;
+    /*
+     * max-width: 80rem;
+     */
+    max-width: 36.25rem; /* Set a max-width for the container, similar to mobile, so it doesn't stretch too wide */
+    margin-left: auto; /* Centers the container itself */
+    margin-right: auto; /* Centers the container itself */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children (form, etc.) vertically */
+    justify-content: center; /* Center children (form) horizontally */
+    align-items: center; /* Center children (form) horizontally for single item, or stack items centrally */
+    gap: 0.75rem;
   }
   #contact-2320 .cs-content {
     max-width: 32.625rem;
@@ -270,7 +280,7 @@
   #contact-2320 .cs-title,
   #contact-2320 .cs-topper,
   #contact-2320 .cs-text {
-    text-align: left;
+    text-align: left-aligned;
     margin-left: 0;
   }
   #contact-2320 .cs-title {

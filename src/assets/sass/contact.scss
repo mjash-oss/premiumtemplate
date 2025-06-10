@@ -19,7 +19,7 @@
 
     #cs-contact {
         padding: var(--sectionPadding);
-        font-family: "Roboto", "Arial", sans-serif;
+        font-family: "Times New Roman", "Times", serif;
 
         .cs-container {
             margin: auto;
@@ -93,7 +93,7 @@
             textarea {
                 min-height: calc(120 / 16 * 1rem);
                 padding-top: calc(20 / 16 * 1rem);
-                font-family: inherit;
+                font-family: 'Times New Roman', Times, serif;
             }
 
             .cs-button-solid {
@@ -317,7 +317,7 @@
 
                 img {
                     /* lets parent background-color bleed through and darken it */
-                    opacity: 0.5;
+                    opacity: 1.1;
                 }
             }
         }

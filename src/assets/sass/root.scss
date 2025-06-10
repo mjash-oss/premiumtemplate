@@ -76,7 +76,7 @@
         font-weight: bold;
 
         // Transition Properties
-        color: #000;
+        color: white;
         transition: color 0.3s;
         transition-delay: 0.1s;
         text-align: center;
@@ -475,7 +475,7 @@
             opacity: 0;
             visibility: hidden;
             transform: scaleX(0);
-            background-color: #fff;
+            background-color: black;
             height: 100vh;
             overflow: hidden;
             transition:
@@ -619,14 +619,14 @@
 @media only screen and (max-width: 63.9375rem) {
     body.dark-mode {
         #cs-navigation {
-            background-color: var(--dark);
+            background-color: transparent;
 
             .cs-line {
-                background-color: #fff;
+                background-color: white;
             }
 
             .cs-ul-wrapper {
-                background-color: var(--medium);
+                background-color: transparent;
             }
 
             .cs-li-link {

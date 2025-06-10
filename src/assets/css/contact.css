@@ -15,7 +15,7 @@
   }
   #cs-contact {
     padding: var(--sectionPadding);
-    font-family: "Roboto", "Arial", sans-serif;
+    font-family: "Times New Roman", "Times", serif;
   }
   #cs-contact .cs-container {
     margin: auto;
@@ -82,7 +82,7 @@
   #cs-contact #cs-form textarea {
     min-height: 7.5rem;
     padding-top: 1.25rem;
-    font-family: inherit;
+    font-family: "Times New Roman", Times, serif;
   }
   #cs-contact #cs-form .cs-button-solid {
     border: none;
@@ -262,7 +262,7 @@
   }
   body.dark-mode #cs-contact .cs-bg-picture img {
     /* lets parent background-color bleed through and darken it */
-    opacity: 0.5;
+    opacity: 1.1;
   }
 }
 

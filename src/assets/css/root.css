@@ -63,7 +63,7 @@
     font-size: 1rem;
     line-height: 3.125em;
     font-weight: bold;
-    color: #000;
+    color: white;
     transition: color 0.3s;
     transition-delay: 0.1s;
     text-align: center;
@@ -377,7 +377,7 @@
     opacity: 0;
     visibility: hidden;
     transform: scaleX(0);
-    background-color: #fff;
+    background-color: black;
     height: 100vh;
     overflow: hidden;
     transition: transform 0.4s, opacity 0.3s;
@@ -497,13 +497,13 @@
 /* Dark Mode */
 @media only screen and (max-width: 63.9375rem) {
   body.dark-mode #cs-navigation {
-    background-color: var(--dark);
+    background-color: transparent;
   }
   body.dark-mode #cs-navigation .cs-line {
-    background-color: #fff;
+    background-color: white;
   }
   body.dark-mode #cs-navigation .cs-ul-wrapper {
-    background-color: var(--medium);
+    background-color: transparent;
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
